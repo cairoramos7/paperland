@@ -1,11 +1,12 @@
 import { Product, Testimonial, GalleryItem, BlogPost } from './types';
 
 // Images mapped to placeholders as per request structure using Lorem Picsum
-const IMAGES = {
+export const IMAGES = {
   planner: 'https://picsum.photos/id/24/800/800', // Book/Planner vibe
   invitation: 'https://picsum.photos/id/42/800/800', // Coffee/Table vibe
   agenda: 'https://picsum.photos/id/366/800/800', // Notebook vibe
-  hero: 'https://picsum.photos/id/20/1920/1080', // Desk setup
+  // Atualizado para uma imagem real de papelaria com planners e canetas (tons rosa/pastel)
+  hero: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1920&auto=format&fit=crop', 
   gallery1: 'https://picsum.photos/id/252/600/600',
   gallery2: 'https://picsum.photos/id/355/600/800',
   gallery3: 'https://picsum.photos/id/445/600/600',

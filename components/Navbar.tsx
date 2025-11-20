@@ -46,11 +46,12 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${getNavbarClasses()}`}>
-      <div className="container mx-auto px-4 md:px-6">
+      {/* Main Header Content - z-50 to stay above the overlay */}
+      <div className="container mx-auto px-4 md:px-6 relative z-50">
         <div className="flex items-center justify-between">
           
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-2 z-50">
+          <NavLink to="/" className="flex items-center gap-2">
              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-serif font-bold text-lg">P</div>
              <span className="font-serif text-xl md:text-2xl font-bold text-primary tracking-tight">Paperland<span className="text-primary-400 font-sans text-sm font-light ml-1 hidden sm:inline-block">Ateliê</span></span>
           </NavLink>
@@ -83,15 +84,16 @@ export const Navbar: React.FC = () => {
 
           {/* Mobile Toggle */}
           <button 
-            className="lg:hidden text-gray-600 hover:text-primary z-50 p-2"
+            className="lg:hidden text-gray-600 hover:text-primary p-2 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - z-40 to sit behind header but above page content */}
       <div className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-6 transition-all duration-300 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
         {navLinks.map((link) => (
           <NavLink 
@@ -103,7 +105,7 @@ export const Navbar: React.FC = () => {
           </NavLink>
         ))}
         <div className="mt-8 flex gap-4">
-          <Button onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank')}>
+          <Button size="lg" onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank')}>
             Falar com a gente
           </Button>
         </div>

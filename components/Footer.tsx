@@ -47,9 +47,9 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-gray-600">
               <li><Link to="/como-funciona" className="hover:text-primary transition-colors">Como Comprar</Link></li>
               <li><Link to="/calculadora" className="hover:text-primary transition-colors">Orçamento Rápido</Link></li>
+              <li><Link to="/faq" className="hover:text-primary transition-colors">Perguntas Frequentes</Link></li>
               <li><Link to="/contato" className="hover:text-primary transition-colors">Fale Conosco</Link></li>
               <li><span className="text-gray-400 cursor-not-allowed">Política de Privacidade</span></li>
-              <li><span className="text-gray-400 cursor-not-allowed">Termos de Uso</span></li>
             </ul>
           </div>
 

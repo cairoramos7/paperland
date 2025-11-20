@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Palette, Award, Truck, Star, Sparkles } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { ProductCard } from '../components/ProductCard';
-import { PRODUCTS, COUPON_CODE, WHATSAPP_NUMBER } from '../constants';
+import { PRODUCTS, COUPON_CODE, WHATSAPP_NUMBER, IMAGES } from '../constants';
 
 export const Home: React.FC = () => {
   const featuredProducts = PRODUCTS.slice(0, 3); // Pick first 3
@@ -15,12 +15,13 @@ export const Home: React.FC = () => {
       <section className="relative min-h-[90vh] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
             <img 
-                src="https://picsum.photos/id/20/1920/1080" 
-                alt="Mesa de trabalho organizada" 
+                src={IMAGES.hero}
+                alt="Ateliê de papelaria com planners e itens de escritório" 
                 className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-primary-900/40 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/50 to-transparent" />
+            {/* Overlay ajustado para ser menos escuro e permitir ver os itens da foto */}
+            <div className="absolute inset-0 bg-primary-900/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-transparent to-transparent" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-white">
@@ -29,15 +30,15 @@ export const Home: React.FC = () => {
                <Sparkles size={16} className="text-yellow-300" />
                <span className="text-sm font-medium tracking-wide">Novidades para 2025 disponíveis</span>
             </div>
-            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6 text-white drop-shadow-md">
               Transforme Momentos em <span className="text-primary-200 italic">Memórias</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-gray-50 mb-8 leading-relaxed max-w-xl drop-shadow">
               Papelaria personalizada feita à mão. Cadernos, planners e presentes únicos que contam a sua história.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/produtos">
-                <Button size="lg" className="w-full sm:w-auto bg-primary text-white font-bold hover:bg-primary-800 border-2 border-white/20 hover:border-white transition-all shadow-xl shadow-black/30">
+                <Button size="lg" className="w-full sm:w-auto bg-primary text-white font-bold hover:bg-primary-800 border-2 border-primary-400/50 hover:border-white transition-all shadow-xl shadow-black/30">
                   Ver Produtos Agora
                 </Button>
               </Link>

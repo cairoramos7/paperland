@@ -9,6 +9,7 @@ import { HowItWorks } from './pages/HowItWorks';
 import { Contact } from './pages/Contact';
 import { Gallery } from './pages/Gallery';
 import { Calculator } from './pages/Calculator';
+import { FAQ } from './pages/FAQ';
 
 // Scroll to top wrapper
 const ScrollToTop = () => {
@@ -44,6 +45,7 @@ const App: React.FC = () => {
           <Route path="/contato" element={<Contact />} />
           <Route path="/galeria" element={<Gallery />} />
           <Route path="/calculadora" element={<Calculator />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </Layout>
     </HashRouter>
