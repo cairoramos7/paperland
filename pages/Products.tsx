@@ -92,7 +92,7 @@ export const Products: React.FC = () => {
             Trabalhamos com encomendas 100% personalizadas. Se você tem uma ideia especial, entre em contato e vamos criar juntos!
           </p>
           <Button onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank')}>
-            Falar com Atendente
+            Falar com a gente
           </Button>
         </div>
       </div>

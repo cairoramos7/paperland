@@ -18,6 +18,8 @@ export const PRODUCTS: Product[] = [
   { id: 4, name: 'Agenda Diária', price: 45.00, category: 'Planejamento', badge: 'Novidade 2025', image: IMAGES.planner },
   { id: 13, name: 'Calendário de Mesa', price: 25.00, category: 'Planejamento', image: IMAGES.planner },
   { id: 14, name: 'Planner Financeiro', price: 42.00, category: 'Planejamento', badge: 'Organização', image: IMAGES.planner },
+  { id: 19, name: 'Bloco Planner Semanal', price: 18.00, category: 'Planejamento', badge: 'Prático', image: IMAGES.planner },
+  { id: 20, name: 'Checklist Diário', price: 12.00, category: 'Planejamento', image: IMAGES.planner },
   
   // Papelaria
   { id: 2, name: 'Caderno Personalizado', price: 28.00, category: 'Papelaria', badge: 'Popular', image: IMAGES.planner },
@@ -27,6 +29,8 @@ export const PRODUCTS: Product[] = [
   { id: 6, name: 'Polaroides', price: 2.50, category: 'Papelaria', badge: 'Trending', image: IMAGES.invitation, isPricePerUnit: true },
   { id: 8, name: 'Cartela de Adesivos', price: 1.50, category: 'Papelaria', badge: 'Personalizável', image: IMAGES.invitation, isPricePerUnit: true },
   { id: 15, name: 'Marca Páginas', price: 5.00, category: 'Papelaria', isPricePerUnit: true, image: IMAGES.invitation },
+  { id: 23, name: 'Caderneta de Saúde', price: 55.00, category: 'Papelaria', badge: 'Infantil', image: IMAGES.agenda },
+  { id: 24, name: 'Caneta Premium', price: 12.00, category: 'Papelaria', image: IMAGES.invitation },
 
   // Brindes
   { id: 9, name: 'Bottons 3.5cm', price: 4.00, category: 'Brindes', badge: 'Criativo', image: IMAGES.agenda, isPricePerUnit: true },
@@ -34,10 +38,14 @@ export const PRODUCTS: Product[] = [
   { id: 11, name: 'Kit Corporativo', price: 120.00, category: 'Brindes', badge: 'Para Empresas', image: IMAGES.agenda },
   { id: 12, name: 'Chaveiro Acrílico', price: 8.00, category: 'Brindes', badge: 'Sob Encomenda', image: IMAGES.agenda, isPricePerUnit: true },
   { id: 18, name: 'Ecobag Algodão', price: 25.00, category: 'Brindes', badge: 'Sustentável', image: IMAGES.agenda },
+  { id: 21, name: 'Mousepad Ergonômico', price: 30.00, category: 'Brindes', image: IMAGES.hero },
+  { id: 25, name: 'Squeeze Alumínio', price: 45.00, category: 'Brindes', badge: 'Personalizado', image: IMAGES.hero },
 
   // Eventos
   { id: 7, name: 'Álbum de Memórias', price: 65.00, category: 'Eventos', badge: 'Especial', image: IMAGES.invitation },
   { id: 17, name: 'Convites Personalizados', price: 8.50, category: 'Eventos', isPricePerUnit: true, badge: 'Sob Medida', image: IMAGES.invitation },
+  { id: 22, name: 'Tag de Mala', price: 10.00, category: 'Eventos', image: IMAGES.invitation },
+  { id: 26, name: 'Topo de Bolo', price: 20.00, category: 'Eventos', badge: 'Festa', image: IMAGES.invitation },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

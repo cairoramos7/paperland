@@ -37,7 +37,7 @@ export const Home: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/produtos">
-                <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-gray-100 border-none">
+                <Button size="lg" className="w-full sm:w-auto bg-primary text-white font-bold hover:bg-primary-800 border-2 border-white/20 hover:border-white transition-all shadow-xl shadow-black/30">
                   Ver Produtos Agora
                 </Button>
               </Link>

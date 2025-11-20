@@ -37,8 +37,15 @@ export const Navbar: React.FC = () => {
   const activeLinkClass = "bg-primary text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-md shadow-primary/20";
   const normalLinkClass = "text-gray-600 hover:text-primary hover:bg-primary-50 px-4 py-2 rounded-full text-sm font-medium transition-all";
 
+  // Navbar dynamic classes
+  const getNavbarClasses = () => {
+    if (isOpen) return 'bg-white'; // Solid white when menu is open for seamless look
+    if (scrolled) return 'bg-white/90 backdrop-blur-md shadow-sm py-2';
+    return 'bg-white/50 backdrop-blur-sm py-4';
+  };
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-white/50 backdrop-blur-sm py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${getNavbarClasses()}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           
@@ -85,7 +92,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-6 transition-all duration-300 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
+      <div className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-6 transition-all duration-300 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
         {navLinks.map((link) => (
           <NavLink 
             key={link.path} 
@@ -97,7 +104,7 @@ export const Navbar: React.FC = () => {
         ))}
         <div className="mt-8 flex gap-4">
           <Button onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank')}>
-            Falar no WhatsApp
+            Falar com a gente
           </Button>
         </div>
       </div>
